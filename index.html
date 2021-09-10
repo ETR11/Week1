@@ -41,17 +41,30 @@
     <form action="">
       <textarea name="commentSection" id="cs" cols="30" rows="10"></textarea>
       <button id="add-comment">Send</button>
+      <button id="remove-comments">Remove</button>
     </form>
 
-    <ul id="cl"></ul>
+    <ul id="cl">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
 
     <script>
       document
         .getElementById("add-comment")
         .addEventListener("click", function () {
-          const skiih = document.createElement("li");
-          skiih.innerHTML = "stuff";
-          document.getElementById("cl").appendChild(skiih);
+          const comment = document.createElement("li");
+          comment.innerHTML = document.getElementById("cs").innerHTML;
+          document.getElementById("cl").appendChild(comment);
+        });
+      document
+        .getElementById("remove-comments")
+        .addEventListener("click", function () {
+          let del = confirm("Delete");
+          if (del == true) {
+            document.getElementById("cl").innerHTML = "";
+          }
         });
     </script>
   </body>
