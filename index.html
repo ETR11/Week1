@@ -45,15 +45,13 @@
 
     <ul id="cl"></ul>
 
-    <div id="test"></div>
-
     <script>
       document
         .getElementById("add-comment")
         .addEventListener("click", function () {
-          let skiih = document.getElementById("test").createElement("p");
+          const skiih = document.createElement("li");
           skiih.innerHTML = "stuff";
-          document.getElementById("test").appendChild(skiih);
+          document.getElementById("cl").appendChild(skiih);
         });
     </script>
   </body>
