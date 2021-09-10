@@ -43,16 +43,18 @@
       <button id="add-comment">Send</button>
     </form>
 
-    <ul></ul>
+    <ul id="cl"></ul>
+
+    <div id="test"></div>
 
     <script>
       document
         .getElementById("add-comment")
-        .addEventListener("click", getComment);
-      function getComment() {
-        document.getElementsByTagName("ul").createElement("li").innerHTML =
-          "stuff";
-      }
+        .addEventListener("click", function () {
+          let skiih = document.getElementById("test").createElement("p");
+          skiih.innerHTML = "stuff";
+          document.getElementById("test").appendChild(skiih);
+        });
     </script>
   </body>
 </html>
