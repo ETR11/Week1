@@ -51,7 +51,7 @@
         .getElementById("add-comment")
         .addEventListener("click", function () {
           const comment = document.createElement("li");
-          comment.innerHTML = document.getElementById("cs").innerHTML;
+          comment.innerHTML = document.getElementById("cs").value;
           document.getElementById("cl").appendChild(comment);
         });
       document
